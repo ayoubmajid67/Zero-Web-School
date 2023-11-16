@@ -1,0 +1,49 @@
+<!-- using normalize file  -->
+
+<!-- using font icon --> font Awesome 
+/*
+1- mv webFont to main dir of your project 
+2- mv all.css and all.min.css to your css dir 
+3- add link to all.min.css in the index.html 
+*/
+
+
+<!-- parent div to not start the content from 0 -->
+<div class="parent">
+    <div class="container">text</div>
+</div>
+<style>
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* small */
+@media (min-width:768px) {
+
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width:992px) {
+
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width:1200px) {
+
+    .container {
+        width: 1170px;
+    }
+}
+
+</style>
+
