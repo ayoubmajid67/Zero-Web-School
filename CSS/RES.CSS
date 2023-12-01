@@ -1502,7 +1502,7 @@ grid
 parent : 
 display : grid | inline-grid
 grid-template-columns => number of columns in  => [px,%,auto,repeat,mix,fraction(fr)]
-you cam use repeat function 
+you can use repeat function 
 grid-template-columns: repeat(4 ,auto);
 grid-template-columns: 200px 2fr 1fr 4fr;
 

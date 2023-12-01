@@ -29,6 +29,13 @@
     font-weight: 800;
 
 }
+@media (max-width:768px) {
+
+    .parent h3 {
+        font-size: 2em;
+        text-align: center;
+    }
+}
 
 .points div {
     width: 50px;
@@ -329,7 +336,7 @@ header .links ul li:not(last-child) a {
 .features .feat p {
     line-height: 1.8;
     font-size: 17px;
-    color: var(paragraphColor);
+    color: var(--paragraphColor);
 
 }
 
@@ -611,7 +618,7 @@ header .links ul li:not(last-child) a {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-
+align-items: center;
     font-size: 16px;
 
 }
