@@ -508,8 +508,8 @@
 <!-- start subscribe -->
 <div class="subscribe">
 
-    <div class="container">
-    <form action="">
+    <div class="container" onsubmit="false">
+    <form action="" onsubmit="SendMessage()">
         <i class="far fa-envelope fa-lg"></i>
         <input type="email" name="mail" placeholder="Your Email">
         <input type="submit" value="subscribe">
@@ -532,7 +532,7 @@
                 blandit aliquet elit, eget tincidunt</p>
         </div>
         <div class="content">
-            <form action="">
+            <form action="" onsubmit="SendMessage()">
                 <input type="text" name="name" class="mainInput" placeholder="Your Name">
                 <input type="email" name="email" class="mainInput" placeholder="Your Email">
                 <textarea name="message"  placeholder="Your Message" class="mainInput"></textarea>
@@ -587,6 +587,12 @@
 
        toggleMenu.onclick=handelMenuClick; 
 
+       function SendMessage()
+{
+    
+    alert("message send it with  success \n 😁");
+    return false;  
+}
 
 
      </script>
