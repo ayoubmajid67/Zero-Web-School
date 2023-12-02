@@ -24,6 +24,16 @@
 	</head>
 
 	<body>
+        <!-- Start upDown animation  -->
+	<div class="parent">
+		<h3>Build By Ayoub Majid</h3>
+		<div class="points">
+			<div class="point1"></div>
+			<div class="point2"></div>
+			<div class="point3"></div>
+		</div>
+	</div>
+	<!-- End upDown animation  -->
 
         <!-- start header -->
         <header>
@@ -596,4 +606,32 @@
 
 
      </script>
+
+  
+
+<!--  start point script  -->
+     <script>
+let parent = document.querySelector(".parent");
+		function delay(milliseconds) {
+			return new Promise((resolve) => setTimeout(resolve, milliseconds));
+		}
+		function scrollToTop() {
+			document.documentElement.scrollTop = 0; // For modern browsers
+			document.body.scrollTop = 0; // For older browsers
+		}
+
+		async function upDownAnim() {
+			scrollToTop();
+			parent.style.display = "flex";
+			for (let i = 1; i >= 0; i -= 0.01) {
+				parent.style.opacity = i;
+				await delay(24);
+			}
+
+			parent.style.display = "none";
+		}
+
+		window.onload = upDownAnim;
+     </script>
+     <!--  end point script  -->
 </html>
