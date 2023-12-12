@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template 3</title>
+
+		<!-- normalize css file -->
+		<link rel="stylesheet" href="css/normalize.css" />
+
+		<!--  font awesome css file   -->
+		<link rel="stylesheet" href="css/all.min.css" />
+
+		<!-- google font  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;500;600;700;800&family=Ruwudu:wght@400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+		<!-- basic css file  -->
+		<link rel="stylesheet" href="css/majid.css" />
+	</head>
+	<body>
+		<!-- start header  -->
+		<div class="header" id="header">
+			<div class="container">
+				<div class="logo">Majid</div>
+				<ul class="mainNav">
+					<li><a href="#articles">Articles</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#">Other Links</a></li>
+					<!-- start mega menu  -->
+					<div class="megaMenu">
+						<div class="image">
+							<img src="imgs/megamenu.png" alt="mega menu " />
+						</div>
+						<ul class="links">
+							<li>
+								<a href="#testimonials"><i class="far fa-comments fa-fw"></i> Testimonials</a>
+							</li>
+							<li>
+								<a href="#team"><i class="far fa-user fa-fw"></i> Team Members</a>
+							</li>
+							<li>
+								<a href="#services"><i class="far fa-building fa-fw"></i> Services</a>
+							</li>
+							<li>
+								<a href="#our-skills"><i class="far fa-check-circle fa-fw"></i> Our Skills</a>
+							</li>
+							<li>
+								<a href="#work-steps"><i class="far fa-clipboard fa-fw"></i> How It Works</a>
+							</li>
+						</ul>
+						<ul class="links">
+							<li>
+								<a href="#events"><i class="far fa-calendar-alt fa-fw"></i> Events</a>
+							</li>
+							<li>
+								<a href="#pricing"><i class="fas fa-server fa-fw"></i> Pricing Plans</a>
+							</li>
+							<li>
+								<a href="#video"><i class="far fa-play-circle fa-fw"></i> Top Videos</a>
+							</li>
+							<li>
+								<a href="#stats"><i class="far fa-chart-bar fa-fw"></i> Stats</a>
+							</li>
+							<li>
+								<a href="#discount"><i class="fas fa-percent fa-fw"></i> Request A Discount</a>
+							</li>
+						</ul>
+					</div>
+					<!-- end mega menu  -->
+				</ul>
+			</div>
+		</div>
+		<!-- end header  -->
+
+		<!-- start landing -->
+
+		<div class="landing">
+			<div class="container">
+				<div class="text">
+					<h1>Welcome, To Youbista World</h1>
+					<p>Here Iam gonna share everything about my life. Books Iam reading, Games Iam Playing, Stories and Events</p>
+				</div>
+				<div class="image">
+					<img src="imgs/landing-image.png" alt="landing img " />
+				</div>
+			</div>
+
+			<a class="goDown" id="articles">
+				<i class="fa-solid fa-angles-down fa-2x"></i>
+			</a>
+		</div>
+
+		<!-- end landing -->
+
+		<!--  start mega menu script  -->
+		<script>
+			let lastNavLi = document.querySelector(".header .mainNav > li:last-of-type");
+			let toggleMenu = document.querySelector(".header .megaMenu");
+
+			let hoverFlag = false;
+
+			lastNavLi.addEventListener("mouseenter", function () {
+				hoverFlag = false;
+				handelWithNavHover();
+			});
+
+			function handelWithNavHover() {
+				hoverFlag = !hoverFlag;
+				if (hoverFlag) toggleMenu.classList.add("activeHoverMegaMenu");
+				else toggleMenu.classList.remove("activeHoverMegaMenu");
+			}
+			lastNavLi.onclick = function () {
+				toggleMenu.classList.toggle("activeClickMegaMenu");
+				hoverFlag = true;
+				handelWithNavHover();
+			};
+			toggleMenu.onmouseleave = function () {
+				hoverFlag = true;
+				handelWithNavHover();
+			};
+		</script>
+		<!--  end mega menu script  -->
+	</body>
+</html>
