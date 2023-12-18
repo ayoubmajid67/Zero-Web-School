@@ -134,7 +134,7 @@ a {
     display: flex;
     transition: opacity 0.3s;
     flex-wrap: wrap;
-    z-index: 99;
+    z-index: 99999;
 }
 
 .points {
