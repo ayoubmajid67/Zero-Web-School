@@ -203,7 +203,7 @@ a {
 
 }
 
-.header .container {
+.header .container{
 
     display: flex;
     justify-content: space-between;
@@ -309,15 +309,17 @@ a {
     display: flex;
     gap: 40px;
     top: calc(100% + 50px);
-    transition: top var(--mainTransitionDuration), opacity var(--mainTransitionDuration);
+    transition: top var(--mainTransitionDuration), opacity var(--mainTransitionDuration) , visibility var(--mainTransitionDuration) ;
     z-index: -1;
     opacity: 0;
+    visibility: hidden;
 }
 
 .header .activeMegaMenu {
 
     z-index: 1;
     opacity: 100;
+    visibility: visible;
     top: 100%;
 }
 

@@ -1021,15 +1021,18 @@
 			console.log(toggleMenu);
 
 			function handelWithMegaMenu() {
+			
+				
 				toggleMenu.classList.toggle("activeMegaMenu");
 			}
 			function removeMegaMenuClass() {
 				toggleMenu.classList.remove("activeMegaMenu");
+				
 			}
 			function addMegaMenuClass() {
 				toggleMenu.classList.add("activeMegaMenu");
 			}
-			//    lastNavLi.addEventListener('mouseenter',handelWithMegaMenu);
+			
 			lastNavLi.addEventListener("mouseenter", addMegaMenuClass);
 			toggleMenu.addEventListener("mouseleave", removeMegaMenuClass);
 		</script>
