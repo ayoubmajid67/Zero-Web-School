@@ -1025,6 +1025,8 @@ a {
     border-radius: 10px;
     width: calc(100% - 60px);
     transition: var(--mainTransitionDuration);
+    aspect-ratio: 4/5;
+    object-fit: cover;
 }
 
 .team .box:hover img {
